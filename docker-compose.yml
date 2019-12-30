@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  githubapi_proxycache:
+    image: mirio/githubapi-proxycache
+    restart: always
+    container_name: githubapi_proxycache
+    ports:
+      - "8080:80"
+    volumes:
+     - /etc/localtime:/etc/localtime:ro
